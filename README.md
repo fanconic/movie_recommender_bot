@@ -8,12 +8,20 @@ The Python Flask dictionary was used to establish a HTTP connection between app.
 
 The Telegram bot takes 3 commands from as messages:
 
-/start: registers the users in the recommmendation DB
+```bash
+/start
+# registers the users in the recommmendation DB
+```
 
-/rate : returns a random unrated movie, which can be rated from 1 to 5
+```bash
+/rate
+# returns a random unrated movie, which can be rated from 1 to 5
+```
 
-/recommend: Recommends the three best fitting movies for the user.
-
+```bash
+/recommend
+# Recommends the three best fitting movies for the user.
+```
 
 Have fun!
 
