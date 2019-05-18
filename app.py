@@ -121,7 +121,6 @@ def rate_movie():
 	# Updated rating matrix
 	current_app.rating_matrix[np.where(current_app.users == chat_id), np.where(current_app.movies == movieId)] = rating
 	
-	'''
 	# Write to csv file, so data isn't lost
 	row = [str(chat_id), str(movieId), str(rating), 'N/A']
 
@@ -135,7 +134,6 @@ def rate_movie():
 				writer.writerow(row)
 			writeFile.close()
 	readFile.close()
-	'''
 
 	# Return json string
 	return jsonify({'status': 'success'})

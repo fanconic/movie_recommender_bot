@@ -20,7 +20,7 @@ logging.basicConfig(level=logging.INFO)
 PORT = 5000
 HOST = 'localhost'
 API_ENDPOINT = ' http://localhost:5000'
-TOKEN = '######' # Insert your telegram token here
+TOKEN = ### Insert Token here ###
 
 def handle(msg):
 	"""
@@ -79,7 +79,8 @@ def handle(msg):
 				InlineKeyboardButton(text='2', callback_data='2 {}'.format(movieId)),
 				InlineKeyboardButton(text='3', callback_data='3 {}'.format(movieId)),
 				InlineKeyboardButton(text='4', callback_data='4 {}'.format(movieId)),
-				InlineKeyboardButton(text='5', callback_data='5 {}'.format(movieId))
+				InlineKeyboardButton(text='5', callback_data='5 {}'.format(movieId)),
+				InlineKeyboardButton(text="I don't know this movie", callback_data='0 {}'.format(movieId))
 			]]
 			keyboard = InlineKeyboardMarkup(inline_keyboard=my_inline_keyboard )
 			bot.sendMessage(chat_id, "How do you rate this movie?", reply_markup=keyboard)
